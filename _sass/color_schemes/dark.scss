@@ -1,0 +1,39 @@
+// theme: dark
+
+// UI colors for large areas
+$color-body: #181818;
+$color-side: #202020;
+$color-search: #333333;
+
+$color-border: $grey-dk-200;
+
+$color-code-back: #383838;
+
+
+$body-background-color: #181818;
+$sidebar-color: #202020;
+$body-text-color: $grey-lt-300;
+$body-heading-color: $grey-lt-000;
+$nav-child-link-color: $grey-dk-000;
+$search-result-preview-color: $grey-dk-000;
+$link-color: $blue-000;
+$btn-primary-color: $blue-200;
+$base-button-color: $grey-dk-250;
+$search-background-color: $grey-dk-250;
+$table-background-color: $grey-dk-250;
+$feedback-color: darken($sidebar-color, 3%);
+
+
+// The following highlight theme is more legible than that used for the light color scheme
+
+// @import "./vendor/OneDarkJekyll/syntax-one-dark";
+// $color-code-back: #282c34;
+
+@import "./vendor/OneDarkJekyll/syntax-one-dark-vivid";
+
+
+// @import "./vendor/OneDarkJekyll/syntax-firewatch";
+// $color-code-back: #282c34;
+
+// @import "./vendor/OneDarkJekyll/syntax-firewatch-green";
+// $color-code-back: #282c34;

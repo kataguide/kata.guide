@@ -1,0 +1,86 @@
+$pink-000: #f77ef1;
+$pink-100: #f967f1;
+$pink-200: #e94ee1;
+$pink-300: #dd2cd4;
+
+// item in a blog post list
+.post-list-item {
+    background-color: #444444;
+    padding: 1em 1em 1em 1em;
+    margin: 1em 0;
+    height: 100%;
+    overflow: auto;
+}
+
+.post-list-item h2 {
+    margin-top: 0em;
+}
+.post-list-item p {
+    margin: 0em;
+}
+
+// for images that need to float on the left side of content
+.img-left {
+    float: none;
+    width: 100%;
+    max-height: none;
+    padding: 0 1.25em;
+
+    @include mq(sm) {
+        float: left;
+        width: 46%;
+    
+        margin: 0em 0.8em 0em 0em;
+        padding: 0;
+        max-height: 70vh;
+    }
+}
+.img-right {
+    float: none;
+    width: 100%;
+    max-height: none;
+    padding: 0 1.25em;
+
+    @include mq(sm) {
+        float: right;
+        width: 46%;
+    
+        margin: 0em 0em 0em 0.8em;
+        padding: 0;
+        max-height: 70vh;
+    }
+}
+
+.post-list-thumb {
+    width: 100%;
+    height: 100%;
+    max-width: 220px;
+    max-height: 180px;
+    object-fit: contain
+}
+
+// needed for overlap with floating elements
+ul {overflow: hidden;}
+
+blockquote {
+    background-color: #444444;
+    padding: 0.1em 1.15em;
+}
+
+// thumbnail on post
+.post-thumb {
+    max-height: 40vh;
+
+}
+
+code {
+    background-color: $color-code-back;
+    color: #FFFFFF;
+    font-size: 102%;
+    border-radius: 6px;
+}
+
+h1 > code, p > code, li > code {
+    padding: 0.12em 0.22em;
+}
+

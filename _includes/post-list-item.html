@@ -1,0 +1,29 @@
+
+<!-- -->
+<a href="{{ post.url }}" style='color: inherit; text-decoration: inherit;'>
+
+<section class='post-list-item'>
+
+        <!--
+        <div class='post-thumb-par'>
+            {% if post.thumb %}
+            <img alt='' class='post-thumb' src='{{ post.thumb }}'>
+            {% else %}
+            <img alt='' class='post-thumb' src='/files/favicon.webp'>
+            {% endif %}
+        </div>
+        -->
+
+    <img class="post-list-thumb img-left" alt='post thumbnail' src='{{ post.thumb }}'>
+    <div>
+        <h2>
+            {{ post.date | date: '%Y-%m-%d' }} - {{ post.title }}
+        </h2>
+        <p>{{ post.excerpt | strip_html | truncate: 400 }}</p>
+    </div>
+
+    <!--
+    <em>posted by <a href='mailto:{{ site.links.email }}'>Cade Brown</a></em>
+    -->
+</section>
+</a>

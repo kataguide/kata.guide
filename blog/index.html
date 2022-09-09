@@ -1,0 +1,36 @@
+---
+layout: default
+permalink: /blog
+title: Kata Blog
+nav_order: 2
+---
+
+<h1>Kata Development Blog</h1>
+
+This blog contains announcements, releases, explanations, and examples related to Kata, KataScript, or programming in general.
+
+<h2>All Posts</h2>
+
+<!-- list of posts -->
+{% assign seenpost = false %}
+{% for post in paginator.posts %}
+
+    <!-- dividing line -->
+    {% if seenpost %}<hr>{% endif %}
+    {% assign seenpost = true %}
+
+    <!-- use a template for each post we're displaying -->
+    {% include post-list-item.html post=post %}
+
+{% endfor %}
+
+<!-- paginator navigation -->
+{% if paginator.previous_page %}
+    <a href='{{ site.baseurl }}{{ paginator.previous_page_path }}'>Previous</a>
+{% endif %}
+
+&mdash; page {{ paginator.page }} of {{ paginator.total_pages }} &mdash;
+
+{% if paginator.next_page %}
+    <a href='{{ site.baseurl }}{{ paginator.next_page_path }}'>Next</a>
+{% endif %}
